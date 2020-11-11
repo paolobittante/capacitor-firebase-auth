@@ -1,6 +1,6 @@
 {
 	"name": "capacitor-firebase-auth",
-	"version": "2.3.2",
+	"version": "2.3.3",
 	"description": "Capacitor plugin for Firebase Authentication",
 	"main": "dist/esm/index.js",
 	"types": "dist/esm/index.d.ts",
@@ -8,7 +8,9 @@
 		"build": "npm run clean && tsc",
 		"clean": "rimraf ./dist",
 		"watch": "tsc --watch",
-		"prepublishOnly": "npm run build"
+		"prepublishOnly": "npm run build",
+		"clean:packed": "rm -f capacitor-firebase-auth-*.tgz",
+		"publish:local": "npm run clean:packed && npm run build && npm pack"
 	},
 	"author": "Bernardo Baumblatt",
 	"license": "MIT",
